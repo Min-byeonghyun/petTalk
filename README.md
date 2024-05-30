@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+🐕‍🦺 애견 커뮤니티 펫톡(PetTalk)
+애견인들이 강아지와 함께 하는 일상을 공유하고, 애견 관련 정보를 얻어갈 수 있는 종합 커뮤니티
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ** Firebase hoisting 배포 **
+     [펫톡 바로가기](everycar-6008d.web.app)
 
-## Available Scripts
+## **💪 기획 배경**
 
-In the project directory, you can run:
+- 견주들만의 sns 게시판을 통해 우리집 강아지를 자랑하고 다른 견주들의 이야기도 들어볼 수 있습니다.
+- 내 주변에서 가까운 애견샵을 찾을 수 있습니다. 견주한테 필요한 상품들이 있는지 볼 수 도 있습니다.
 
-### `npm start`
+## **💪 해결 컨셉**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 이 서비스는 sns를 통해 견주들과 이야기도 하고 좋은 제품이있는 근처 애견샵도 찾을수 있습니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **💪 기대 효과**
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 이 서비스는 sns를 통해 나의 강아지를 자랑 할 수 있고 또한 문제가있을시 sns를 통해 문제를 해결 할 수 있습니다.
