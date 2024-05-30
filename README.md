@@ -3,7 +3,7 @@
 
 ## ** Firebase hoisting 배포 **
 
-     [펫톡 바로가기](https://everycar-6008d.web.app/)
+[바로가기](https://everycar-6008d.web.app/)
 
 ## **💪 기획 배경**
 
