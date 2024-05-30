@@ -2,7 +2,8 @@
 애견인들이 강아지와 함께 하는 일상을 공유하고, 애견 관련 정보를 얻어갈 수 있는 종합 커뮤니티
 
 ## ** Firebase hoisting 배포 **
-     [펫톡 바로가기](everycar-6008d.web.app)
+
+     [펫톡 바로가기](https://everycar-6008d.web.app/)
 
 ## **💪 기획 배경**
 
