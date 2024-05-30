@@ -16,8 +16,8 @@ export default function GoogleButton() {
   };
   return (
     <Button onClick={onClick}>
-      <Logo src="/google-logo.svg" />
-      Continue with Github
+      <Logo src="/src/logo/google-logo.svg" />
+      Continue with Google
     </Button>
   );
 }
