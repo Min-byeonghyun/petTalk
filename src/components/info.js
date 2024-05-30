@@ -91,7 +91,7 @@ const Info = () => {
       <InfoLocation>애견을 위한 장소 찾기</InfoLocation>
       <InfoShop>내 위치에서 애견샵을 찾아보세요!!</InfoShop>
       <InfoMapForm>
-        <InfoLocation>현재 위치 :</InfoLocation>
+        <InfoLocation>현재 위치 : </InfoLocation>
         <LocationBox>
           <LocationInput value={region} onChange={onChangeRegion} placeholder="현재 위치를 입력하세요" />
           <LocationButton type="submit" onClick={onSubmit}>
