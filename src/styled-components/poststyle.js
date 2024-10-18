@@ -9,6 +9,7 @@ export const Form = styled.form`
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
+  margin-top : 70px;
   max-width: 800px;
   width : 700px;
 `;

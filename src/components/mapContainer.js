@@ -177,7 +177,7 @@ const MapContainer = ({searchPlace}) => {
     _map.setZoomable(true);
   }
   const zoomOFF = () => {
-    _map.setZoomable(true);
+    _map.setZoomable(false);
   }
 
 

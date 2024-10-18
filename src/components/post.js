@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 10px;
+  margin-top : 30px;
 `;
 
 const Column = styled.div`

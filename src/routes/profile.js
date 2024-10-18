@@ -20,6 +20,7 @@ const Wrapper = styled.div`
   gap: 20px;
   width : 700px;
   max-width : 700px;
+  margin-top : 40px;
 `;
 const AvatarUpload = styled.label`
   width: 80px;
@@ -47,6 +48,13 @@ const Tweets = styled.div`
   flex-direction: column;
   gap: 10px;
   overflow-y: scroll;
+`;
+
+const NoTweetsMessage = styled.div`
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin-top: 20px;
 `;
 
 const NameInput = styled.input`
@@ -158,13 +166,18 @@ export default function Profile() {
         <Name>{name ?? "Anonymous"}</Name>
       )}
       <ChangeNameBtn onClick={onChangeNameClick}>
-        {editMode ? "Save" : "Change Name"}
+        {editMode ? "완료" : "닉네임 변경"}
       </ChangeNameBtn>
-      <Tweets>
-        {tweets.map((tweet) => (
-          <Post key={tweet.id} {...tweet} />
-        ))}
-      </Tweets>
+      
+      {tweets.length > 0 ? (
+        <Tweets>
+          {tweets.map((tweet) => (
+            <Post key={tweet.id} {...tweet} />
+          ))}
+        </Tweets>
+      ) : (
+        <NoTweetsMessage>작성한 글이 없습니다</NoTweetsMessage>
+      )}
     </Wrapper>
   );
 }
