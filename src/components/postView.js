@@ -111,7 +111,7 @@ const PostView = () => {
   }, [id]);
 
   const onExit = () => {
-    navigate('/board');
+    navigate('/');
   };
 
   return (
@@ -135,4 +135,4 @@ const PostView = () => {
   );
 };
 
-export default PostView;
+export default PostView; 

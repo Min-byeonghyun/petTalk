@@ -1,7 +1,8 @@
 import { auth } from '../firebase';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
-import { Button , Logo } from "../styled-components/socialButtonstyle";
+import { Button  } from "../styled-components/socialButtonstyle";
+import GoogleLogo from '../logo/googlelogo';
 
 export default function GoogleButton() {
   const navigate = useNavigate();
@@ -16,8 +17,8 @@ export default function GoogleButton() {
   };
   return (
     <Button onClick={onClick}>
-      <Logo src="/src/logo/google-logo.svg" />
-      Continue with Google
+      <GoogleLogo/>
+      구글 로그인
     </Button>
   );
 }

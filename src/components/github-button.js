@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
 import { GithubAuthProvider, signInWithPopup } from "firebase/auth";
-import { Button , Logo } from "../styled-components/socialButtonstyle";
-
+import { Button  } from "../styled-components/socialButtonstyle";
+import Githublogo from "../logo/githublogo";
 
 export default function GithubButton() {
   const navigate = useNavigate();
@@ -17,8 +17,8 @@ export default function GithubButton() {
   };
   return (
     <Button onClick={onClick}>
-      <Logo src="/src/logo/github-logo.svg" />
-      Continue with Github
+      <Githublogo/>
+      깃허브 로그인
     </Button>
   );
 }
