@@ -111,7 +111,7 @@ const PostView = () => {
   }, [id]);
 
   const onExit = () => {
-    navigate('/');
+    navigate('/board');
   };
 
   return (
