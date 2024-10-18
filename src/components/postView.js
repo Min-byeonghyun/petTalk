@@ -7,7 +7,7 @@ import styled from "styled-components";
 import Comment from "./comment";
 
 const Container = styled.div`
-  height : 100vh;
+  height: 100vh;
   max-width: 800px;
   padding: 20px;
   background-color: #f9f9f9;
@@ -17,45 +17,41 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  border : 2px solid #1d9bf9; 
-  border-radius : 20px;
-  overflow : hidden;
+  border: 2px solid #1d9bf9;
+  border-radius: 20px;
+  overflow: hidden;
 `;
 
 const Image = styled.img`
   max-width: 400px;
   max-height: 500px;
-  
-
 `;
 
 const TextContainer = styled.div`
-  width : 320px;
-  border : 1px solid #ccc;
+  width: 320px;
+  border: 1px solid #ccc;
   position: relative;
-  height : 500px;
- 
-`
+  height: 500px;
+`;
 const Username = styled.p`
   font-size: 16px;
   font-weight: bold;
   color: #333;
-  padding : 10px;
+  padding: 10px;
   border-bottom: 1px solid #1d9bf9;
 `;
 
 const Title = styled.h2`
   font-size: 28px;
   font-weight: bold;
-  padding : 10px;
+  padding: 10px;
   border-bottom: 1px solid #1d9bf9;
-  
 `;
 
 const Information = styled.p`
   font-size: 18px;
   color: #555;
-  margin : 10px;
+  margin: 10px;
 `;
 const ExitButton = styled.button`
   position: absolute;
@@ -70,12 +66,11 @@ const ExitButton = styled.button`
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
-  
+
   &:hover {
     background-color: #0e6abf;
   }
-`
-
+`;
 
 const PostView = () => {
   const { id } = useParams();
@@ -111,7 +106,7 @@ const PostView = () => {
   }, [id]);
 
   const onExit = () => {
-    navigate('/');
+    navigate("/board");
   };
 
   return (
@@ -120,19 +115,18 @@ const PostView = () => {
         <>
           <ImageContainer>
             {imageUrl && <Image src={imageUrl} alt="image" />}
-          <TextContainer>
-          <Username>작성자: {username}</Username>
-          <Title>제목 : {post.title}</Title>
-          <Information>{post.information}</Information>
-          <ExitButton onClick={onExit}>게시글 페이지로..</ExitButton>
-          </TextContainer>
+            <TextContainer>
+              <Username>작성자: {username}</Username>
+              <Title>제목 : {post.title}</Title>
+              <Information>{post.information}</Information>
+              <ExitButton onClick={onExit}>게시글 페이지로..</ExitButton>
+            </TextContainer>
           </ImageContainer>
-          <Comment postId={id}/>
+          <Comment postId={id} />
         </>
       )}
-      
     </Container>
   );
 };
 
-export default PostView; 
+export default PostView;
