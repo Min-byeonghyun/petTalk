@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { auth } from "../firebase";
 import { LuDog } from "react-icons/lu";
 
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,34 +15,47 @@ const Wrapper = styled.div`
 
 const Menu = styled.div`
   display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  background-color: #343a40;
+  width: 100vw;
+  min-width: 100vw;
+  align-items: center;
+  background: #ffaa4c;
+  box-shadow: 0 4px 14px #ffaa4c33;
+  position: relative;
   padding: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 `;
 
 const MenuItem = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 100px; 
-  border-radius: 10px; 
-  transition: all 0.3s ease;
-  position: relative;
-  margin-left: 20px; 
+  height: 54px;
+  padding: 0 30px;
+  border-radius: 18px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+  background: none;
+  border: none;
+  transition: background 0.15s, color 0.15s, transform 0.13s;
+  margin-left: 10px;
 
   &:hover {
-    background-color: #495057;
-    transform: scale(1.05); 
+    background: #ffa341;
+    color: #fff;
+    transform: translateY(-1px) scale(1.03);
   }
 
   &.log-out {
     margin-left: auto;
-    border: 2px solid transparent;
-    background-color: #dc3545;
+    border-radius: 18px;
+    background: #ff7043 !important;
+    color: #fff !important;
+    font-weight: bold;
+    box-shadow: 0 1.5px 7px #ff704355;
+    padding: 0 32px;
+    &:hover {
+      background: #e65100 !important;
+    }
     svg {
       fill: white;
     }
@@ -52,8 +64,8 @@ const MenuItem = styled.div`
 
 const MenuName = styled.div`
   color: white;
-  font-size: 16px; 
-  margin-left: 10px; 
+  font-size: 16px;
+  margin-left: 10px;
 `;
 
 const DogIcon = styled(LuDog)`
@@ -73,23 +85,23 @@ export default function Layout() {
   return (
     <Wrapper>
       <Menu>
-        <Link to="/" style={{textDecoration : "none"}}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <MenuItem>
-            <DogIcon color="white"  />
+            <DogIcon color="white" />
             <MenuName>PetTalk</MenuName>
           </MenuItem>
         </Link>
-        <Link to="/board" style={{textDecoration : "none"}}>
+        <Link to="/board" style={{ textDecoration: "none" }}>
           <MenuItem>
             <MenuName>Board</MenuName>
           </MenuItem>
         </Link>
-        <Link to="/info" style={{textDecoration : "none"}}>
+        <Link to="/info" style={{ textDecoration: "none" }}>
           <MenuItem>
             <MenuName>Info</MenuName>
           </MenuItem>
         </Link>
-        <Link to="/profile" style={{textDecoration : "none"}}>
+        <Link to="/profile" style={{ textDecoration: "none" }}>
           <MenuItem>
             <MenuName>Profile</MenuName>
           </MenuItem>

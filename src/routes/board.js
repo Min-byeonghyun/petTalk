@@ -6,13 +6,14 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
 
 const Wrapper = styled.div`
-   display: grid;
+  display: grid;
   gap: 30px;
   position: relative;
   padding-bottom: 80px;
-  width : 700px;
-  max-width : 700px;
-  `;
+  width: 700px;
+  max-width: 700px;
+  min-height: 570px; /* 게시글 3~4개 높이에 맞춰 적절히 설정 */
+`;
 
 const Button = styled.button`
   width: 120px;
@@ -20,7 +21,7 @@ const Button = styled.button`
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background-color: #007bff;
+  background-color: #ffaa4c;
   color: white;
   border: none;
   border-radius: 10px;
@@ -30,22 +31,19 @@ const Button = styled.button`
   transition: background-color 0.3s, transform 0.3s;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #f6ceb2;
     transform: translateY(-2px);
   }
 
   &:active {
-    background-color: #004494;
+    background-color: #f6ceb2;
     transform: translateY(0);
   }
-  
 `;
-
 
 export default function Board() {
   const navigate = useNavigate();
   const [isAnonymous, setIsAnonymous] = useState(false);
-
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -58,15 +56,15 @@ export default function Board() {
     return () => unsubscribe();
   }, []);
   const onClick = (e) => {
-    navigate("/postform")
-  }
+    navigate("/postform");
+  };
 
   return (
     <>
-    <Wrapper>
-      <NoticeBoard/>
-      {!isAnonymous && <Button onClick={onClick}>게시글 올리기</Button>}
-    </Wrapper>
-      </>
-);
+      <Wrapper>
+        <NoticeBoard />
+        {!isAnonymous && <Button onClick={onClick}>게시글 올리기</Button>}
+      </Wrapper>
+    </>
+  );
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
-   display: flex;
+  display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 20px;
@@ -9,22 +9,21 @@ export const Form = styled.form`
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
-  margin-top : 70px;
+  margin-top: 70px;
   max-width: 800px;
-  width : 700px;
+  width: 700px;
 `;
 export const PostTitle = styled.h2`
-
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #1d9bf9;
+  color: #ffaa4c;
   text-align: center;
 `;
 
 export const TitleArea = styled.textarea`
   height: auto;
-  border: 2px solid black;
+  border: 2px solid #ffaa4c;
   padding: 12px;
   border-radius: 20px;
   font-size: 15px;
@@ -40,13 +39,13 @@ export const TitleArea = styled.textarea`
   }
   &:focus {
     outline: none;
-    border-color: #1d9bf9;
+    border-color: #f6ceb2;
   }
 `;
 
 export const TextArea = styled.textarea`
   height: 320px;
-  border: 2px solid black;
+  border: 2px solid #ffaa4c;
   padding: 20px;
   border-radius: 20px;
   font-size: 18px;
@@ -60,7 +59,7 @@ export const TextArea = styled.textarea`
   }
   &:focus {
     outline: none;
-    border-color: #1d9bf9;
+    border-color: #ffaa4c;
   }
 `;
 export const PriceArea = styled.textarea`
@@ -82,7 +81,7 @@ export const PriceArea = styled.textarea`
   }
   &:focus {
     outline: none;
-    border-color: #1d9bf9;
+    border-color: #f6ceb2;
   }
 `;
 
@@ -90,20 +89,19 @@ export const AttachFileButton = styled.label`
   font-size: 14px;
   font-weight: 600;
   padding: 10px 0px;
-  color: #1d9bf9;
+  color: #ffaa4c;
   text-align: center;
   border-radius: 20px;
-  border: 1px solid #1d9bf9;
+  border: 1px solid #ffaa4c;
   cursor: pointer;
 `;
 
 export const AttachFileInput = styled.input`
-  display : none;
-
+  display: none;
 `;
 
 export const SubmitBtn = styled.input`
-  background-color: #1d9bf9;
+  background-color: #ffaa4c;
   color: white;
   border: none;
   padding: 10px 0px;

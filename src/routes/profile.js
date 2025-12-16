@@ -18,16 +18,16 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  width : 700px;
-  max-width : 700px;
-  margin-top : 40px;
+  width: 700px;
+  max-width: 700px;
+  margin-top: 40px;
 `;
 const AvatarUpload = styled.label`
   width: 80px;
   overflow: hidden;
   height: 80px;
   border-radius: 50%;
-  background-color: #3b3a3a;
+  background-color: white;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -58,7 +58,7 @@ const NoTweetsMessage = styled.div`
 `;
 
 const NameInput = styled.input`
-  background-color: black;
+  background-color: #ffaa4c;
   font-size: 22px;
   text-align: center;
   color: white;
@@ -66,7 +66,7 @@ const NameInput = styled.input`
   border-radius: 15px;
 `;
 const ChangeNameBtn = styled.button`
-  background-color: #3b3a3a;
+  background-color: #ffaa4c;
   color: white;
   padding: 10px 5px;
   font-size: 15px;
@@ -86,7 +86,7 @@ export default function Profile() {
     if (user) {
       fetchTweet();
     }
-  }, [user]); 
+  }, [user]);
 
   const onAvatarChange = async (e) => {
     if (!user) return;
@@ -112,9 +112,17 @@ export default function Profile() {
     );
     const snapshot = await getDocs(tweetQuery);
     const tweets = snapshot.docs.map((doc) => {
-      const { username, photo, title, information , userId, createAt  } = doc.data();
+      const { username, photo, title, information, userId, createAt } =
+        doc.data();
       return {
-        createAt ,username, photo, title, information , userId , id: doc.id , avatar : user?.photoURL, 
+        createAt,
+        username,
+        photo,
+        title,
+        information,
+        userId,
+        id: doc.id,
+        avatar: user?.photoURL,
       };
     });
     setTweets(tweets);
@@ -135,8 +143,7 @@ export default function Profile() {
     }
   };
 
-  const onNameChange = (e) =>
-    setName(e.target.value);
+  const onNameChange = (e) => setName(e.target.value);
 
   return (
     <Wrapper>
@@ -168,7 +175,7 @@ export default function Profile() {
       <ChangeNameBtn onClick={onChangeNameClick}>
         {editMode ? "완료" : "닉네임 변경"}
       </ChangeNameBtn>
-      
+
       {tweets.length > 0 ? (
         <Tweets>
           {tweets.map((tweet) => (

@@ -27,16 +27,16 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Home/>
+        element: <Home />,
       },
       {
         path: "board",
         element: <Board />,
       },
-      
+
       {
         path: "info",
-        element: <Info/>
+        element: <Info />,
       },
       {
         path: "profile",
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: "postView/:id",
-        element: <PostView/>
+        element: <PostView />,
       },
     ],
   },
@@ -71,10 +71,33 @@ const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-  body {
-    background-color: white;
-    color:black;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  html, body, #root {
+    min-height: 100vh;
+    background: linear-gradient(130deg, #FFFDF6 70%, #F6CEB2 100%);
+    font-family: 'Pretendard', 'Noto Sans KR', 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #222;
+    letter-spacing: -0.2px;
+    -webkit-font-smoothing: antialiased;
+  }
+  a {
+    color: #FFAA4C;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  a:hover {
+    color: #7DB9B6;
+    text-decoration: underline;
+  }
+  button, input, select, textarea {
+    font-family: inherit;
+    border-radius: 10px;
+    outline: none;
+  }
+  ::selection { background: #FFAA4C33 }
+  
+  /* 깔끔한 카드/엘리먼트 그림자 */
+  .dog-card-shadow {
+    box-shadow: 0 4px 14px 0 rgba(255,170,76, 0.15), 0 1.5px 3px 0 rgba(80,60,40,0.06);
   }
 `;
 

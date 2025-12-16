@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { FaSearch } from 'react-icons/fa';
-import { useState } from 'react';
-import MapContainer from './mapContainer';
+import styled from "styled-components";
+import { FaSearch } from "react-icons/fa";
+import { useState } from "react";
+import MapContainer from "./mapContainer";
 
 const InfoContainer = styled.div`
   width: 1000px;
@@ -11,13 +11,13 @@ const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
 `;
 
 const InfoTitle = styled.h1`
   font-size: 32px;
-  color: #1d9bf9;
+  color: #ffaa4c;
   margin-bottom: 20px;
   font-weight: 700;
 `;
@@ -73,17 +73,15 @@ const LocationButton = styled.button`
   }
 `;
 
-
 const Info = () => {
   const [region, setRegion] = useState("");
 
   const onChangeRegion = (e) => {
     setRegion(e.target.value);
-  }
-  const onSubmit= (e)=>{
+  };
+  const onSubmit = (e) => {
     e.preventDefault();
-  }
-
+  };
 
   return (
     <InfoContainer>
@@ -93,12 +91,16 @@ const Info = () => {
       <InfoMapForm>
         <InfoLocation>현재 위치 : </InfoLocation>
         <LocationBox>
-          <LocationInput value={region} onChange={onChangeRegion} placeholder="현재 위치를 입력하세요" />
+          <LocationInput
+            value={region}
+            onChange={onChangeRegion}
+            placeholder="현재 위치를 입력하세요"
+          />
           <LocationButton type="submit" onClick={onSubmit}>
             <FaSearch />
           </LocationButton>
         </LocationBox>
-        <MapContainer searchPlace={region + "애견용품"}/>
+        <MapContainer searchPlace={region + "애견용품"} />
       </InfoMapForm>
     </InfoContainer>
   );

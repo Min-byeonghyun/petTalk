@@ -7,68 +7,95 @@ import styled from "styled-components";
 import Comment from "./comment";
 
 const Container = styled.div`
-  height: 100vh;
-  max-width: 800px;
-  padding: 20px;
-  background-color: #f9f9f9;
-`;
-
-const ImageContainer = styled.div`
+  width: 100vw;
+  min-height: 100vh;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 48px 18px 28px 18px;
+  background: none;
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  border: 2px solid #1d9bf9;
-  border-radius: 20px;
-  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Image = styled.img`
-  max-width: 400px;
-  max-height: 500px;
+  width: 100%;
+  max-width: 720px;
+  min-height: 260px;
+  border-radius: 28px;
+  object-fit: cover;
+  background: #fffbe7;
+  box-shadow: 0 6px 26px #ffaa4c22;
+  margin-bottom: 32px;
 `;
 
-const TextContainer = styled.div`
-  width: 320px;
-  border: 1px solid #ccc;
-  position: relative;
-  height: 500px;
+const InfoCard = styled.div`
+  width: 100%;
+  max-width: 720px;
+  background: #fffdfa;
+  border-radius: 20px;
+  box-shadow: 0 2.5px 18px #ffd79d22;
+  padding: 34px 28px 28px 28px;
+  margin-bottom: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;
+
+const CommentSection = styled.div`
+  width: 100%;
+  max-width: 720px;
+`;
+
 const Username = styled.p`
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  padding: 10px;
-  border-bottom: 1px solid #1d9bf9;
+  font-size: 21px;
+  font-weight: 700;
+  color: #ffaa4c;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 12px;
+  &::before {
+    content: "🐶";
+    font-size: 23px;
+  }
 `;
 
 const Title = styled.h2`
-  font-size: 28px;
-  font-weight: bold;
-  padding: 10px;
-  border-bottom: 1px solid #1d9bf9;
+  font-size: 29px;
+  font-weight: 900;
+  color: #25201e;
+  margin-bottom: 14px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #fff7ed;
+  box-shadow: 0 2px 10px #ffaa4c10;
 `;
 
 const Information = styled.p`
   font-size: 18px;
-  color: #555;
-  margin: 10px;
+  color: #333;
+  margin-bottom: 22px;
+  padding: 11px 4px 11px 8px;
+  border-radius: 7px;
+  background: #fff;
 `;
-const ExitButton = styled.button`
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #1d9bf9;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
 
+const ExitButton = styled.button`
+  margin-top: 18px;
+  padding: 11px 32px;
+  background: linear-gradient(90deg, #ffaa4c 65%, #f6ceb2 100%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px 0 #ffaa4c22;
+  transition: background 0.14s, box-shadow 0.16s;
   &:hover {
-    background-color: #0e6abf;
+    background: linear-gradient(90deg, #7db9b6 65%, #ffaa4c 100%);
+    box-shadow: 0 6px 20px #ffaa4c44;
   }
 `;
 
@@ -113,16 +140,16 @@ const PostView = () => {
     <Container>
       {post && (
         <>
-          <ImageContainer>
-            {imageUrl && <Image src={imageUrl} alt="image" />}
-            <TextContainer>
-              <Username>작성자: {username}</Username>
-              <Title>제목 : {post.title}</Title>
-              <Information>{post.information}</Information>
-              <ExitButton onClick={onExit}>게시글 페이지로..</ExitButton>
-            </TextContainer>
-          </ImageContainer>
-          <Comment postId={id} />
+          {imageUrl && <Image src={imageUrl} alt="image" />}
+          <InfoCard>
+            <Username>작성자: {username}</Username>
+            <Title>제목 : {post.title}</Title>
+            <Information>{post.information}</Information>
+          </InfoCard>
+          <CommentSection>
+            <Comment postId={id} />
+          </CommentSection>
+          <ExitButton onClick={onExit}>게시글 페이지로 돌아가기</ExitButton>
         </>
       )}
     </Container>

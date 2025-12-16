@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  
+  min-height: 1006px;
 `;
 
 const NoticeBoard = () => {
@@ -48,22 +48,24 @@ const NoticeBoard = () => {
   const indexOfFirstTweet = indexOfLastTweet - tweetsPerPage;
   const currentTweets = tweets.slice(indexOfFirstTweet, indexOfLastTweet);
   const totalPages = Math.ceil(tweets.length / tweetsPerPage);
-  
+
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
   return (
-    <Wrapper>
-      {currentTweets.map((tweet) => (
-        <Post key={tweet.id} {...tweet} />
-      ))}
-    <Page
-    currentPage={currentPage}
-    totalPages={totalPages}
-    onPageChange={handlePageChange}
-  />
-    </Wrapper>
+    <div>
+      <Wrapper>
+        {currentTweets.map((tweet) => (
+          <Post key={tweet.id} {...tweet} />
+        ))}
+      </Wrapper>
+      <Page
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
+    </div>
   );
 };
 
